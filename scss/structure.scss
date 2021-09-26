@@ -24,14 +24,3 @@ p {
   min-height: 500px;
   margin: 0 auto;
 }
-
-@media only screen and (max-width: 730px) {
-  .site-container {
-    .home {
-      .promo-trips {
-        .promoImage {
-        }
-      }
-    }
-  }
-}
