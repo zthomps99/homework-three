@@ -2,7 +2,7 @@
   .hero {
     min-height: 500px;
     margin: 0 auto;
-    background-image: url(/images/heroimage.png);
+    background-image: url(../images/heroimage.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -113,7 +113,6 @@
     .dropdowns {
       max-width: 800px;
       height: 100px;
-
       display: flex;
       justify-content: space-between;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -147,16 +146,23 @@
   margin: 0 auto;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-bottom: 20px;
+  width: 815px;
+  display: inline-block;
 
   label {
-    max-width: 57px;
+    max-width: 90px;
+    margin-right: 31px;
     height: 10px;
     display: inline-block;
     text-align: left;
     font-size: 18px;
+    white-space: nowrap;
+    span {
+      margin-right: 11.5px;
+    }
   }
   input {
-    width: 698px;
+    width: 650px;
     border: 1px solid #79addc;
     height: 58px;
     padding: 20px 10px;
@@ -184,4 +190,84 @@
   @include site-button;
   width: 760px;
   height: 60px;
+}
+
+/*Promo image responsiveness*/
+@media only screen and (max-width: 730px) {
+  .promo-trips {
+    flex-direction: column;
+    align-items: center;
+    .promoImage {
+      margin-bottom: 90px;
+    }
+  }
+}
+
+/*Form responsiveness*/
+@media only screen and (max-width: 730px) {
+  .booking {
+    .bookingWrapper {
+      width: 100%;
+
+      h1 {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .form {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        .rowOne {
+        }
+
+        input [type="text"] {
+          width: 100%;
+        }
+      }
+      .formTwo {
+        max-width: 600px;
+        flex-direction: column;
+        align-items: center;
+        display: inline-flex;
+
+        label {
+          width: 100px;
+          margin-bottom: 20px;
+          white-space: nowrap;
+          text-align: center;
+        }
+
+        input {
+          max-width: 600px;
+        }
+      }
+
+      .dropdowns {
+        .selection {
+          padding-right: 10px;
+          select {
+            width: 90px;
+          }
+        }
+      }
+
+      textarea {
+        max-width: 600px;
+      }
+
+      .booking-submit {
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .home {
+    .hero {
+      max-width: 100%;
+      height: 50px;
+    }
+  }
 }

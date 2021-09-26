@@ -29,7 +29,7 @@ p {
 .home .hero {
   min-height: 500px;
   margin: 0 auto;
-  background-image: url(/images/heroimage.png);
+  background-image: url(../images/heroimage.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -166,16 +166,23 @@ p {
   margin: 0 auto;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-bottom: 20px;
+  width: 815px;
+  display: inline-block;
 }
 .formTwo label {
-  max-width: 57px;
+  max-width: 90px;
+  margin-right: 31px;
   height: 10px;
   display: inline-block;
   text-align: left;
   font-size: 18px;
+  white-space: nowrap;
+}
+.formTwo label span {
+  margin-right: 11.5px;
 }
 .formTwo input {
-  width: 698px;
+  width: 650px;
   border: 1px solid #79addc;
   height: 58px;
   padding: 20px 10px;
@@ -207,6 +214,84 @@ p {
   height: 60px;
 }
 
+/*Promo image responsiveness*/
+@media only screen and (max-width: 730px) {
+  .promo-trips {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .promo-trips .promoImage {
+    margin-bottom: 90px;
+  }
+}
+/*Form responsiveness*/
+@media only screen and (max-width: 730px) {
+  .booking .bookingWrapper {
+    width: 100%;
+  }
+  .booking .bookingWrapper h1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .booking .bookingWrapper .form {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .booking .bookingWrapper .form input [type=text] {
+    width: 100%;
+  }
+  .booking .bookingWrapper .formTwo {
+    max-width: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .booking .bookingWrapper .formTwo label {
+    width: 100px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .booking .bookingWrapper .formTwo input {
+    max-width: 600px;
+  }
+  .booking .bookingWrapper .dropdowns .selection {
+    padding-right: 10px;
+  }
+  .booking .bookingWrapper .dropdowns .selection select {
+    width: 90px;
+  }
+  .booking .bookingWrapper textarea {
+    max-width: 600px;
+  }
+  .booking .bookingWrapper .booking-submit {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .home .hero {
+    max-width: 100%;
+    height: 50px;
+  }
+}
 nav {
   position: fixed;
   height: 90px;
@@ -265,6 +350,12 @@ nav .links a {
   white-space: nowrap;
 }
 
+@media only screen and (max-width: 730px) {
+  nav {
+    margin-right: 65px;
+    margin-left: 65px;
+  }
+}
 footer {
   width: 100%;
   height: 100px;
@@ -301,4 +392,16 @@ footer .row .social {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 5px;
+}
+
+@media only screen and (max-width: 730px) {
+  footer {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer .logo {
+    margin-left: -55px;
+  }
 }

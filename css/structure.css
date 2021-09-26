@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -23,15 +24,4 @@ p {
   max-width: 1280px;
   min-height: 500px;
   margin: 0 auto;
-}
-
-@media only screen and (max-width: 730px) {
-  .site-container {
-    .home {
-      .promo-trips {
-        .promoImage {
-        }
-      }
-    }
-  }
 }
